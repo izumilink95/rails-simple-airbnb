@@ -1,0 +1,39 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @flat.image_url %>');">
+  <div class="wrapper">
+    <%= link_to "Edit", edit_flat_path(@flat), class: "btn btn-warning", style: "color:white;" %>
+    <%= link_to "Delete", flat_path(@flat), class: "btn btn-danger", style: "color:white;", method: :delete %>
+  </div>
+</div>
+
+<div class="container" style="position:relative;top:-80px;">
+  <div class="row">
+    <div class="col-8">
+      <div class="info-box flat-desc">
+        <h2><%= @flat.name %></h2>
+        <% rand(1..10).times do %>
+          <span><%= @flat.description %></span>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="info-box booking-form">
+        <h4>Book this place!</h4>
+        <label>From</label>
+        <input type="date" class="form-control">
+        <label>To</label>
+        <input type="date" class="form-control">
+        <br>
+        <button type="submit" class="form-control btn btn-success" , style="color:white;">Book</button>
+      </div>
+      <div class="info-box booking-details">
+        <h4>Details</h4>
+        <span><i class="fas fa-users"></i><%= @flat.number_of_guests %></span>
+        <span><i class="fas fa-pound-sign"></i><%= @flat.price_per_night %></span>
+      </div>
+      <div class="info-box share">
+        <h5>Share:</h5>
+        <span><i class="fab fa-facebook-square"></i><i class="fab fa-twitter-square"></i><i class="fab fa-pinterest-square"></i><span>
+      </div>
+    </div>
+  </div>
+</div>

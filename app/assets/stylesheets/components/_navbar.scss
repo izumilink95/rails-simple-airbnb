@@ -1,0 +1,30 @@
+.navbar-lewagon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: white;
+
+  a:first-child,
+  a:first-child:hover {
+    color: black;
+    text-decoration: none;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  form {
+    display: inline;
+
+    input {
+    display: inline-block;
+    width: 400px;
+    }
+  }
+
+  .btn {
+    color: white;
+  }
+}
